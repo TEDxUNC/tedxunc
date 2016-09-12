@@ -126,7 +126,7 @@ var watch = function() {
   gulp.watch('./scss/**/*', ['scss'])
   gulp.watch('./js/**/*', ['js'])
   gulp.watch('./img/**/*', ['images'])
-  // gulp.watch('./static/**', ['static'])
+  gulp.watch('./static/**', ['static'])
 
   console.log('Server listening on port %s', port)
 }
