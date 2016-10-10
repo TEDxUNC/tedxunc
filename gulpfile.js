@@ -10,7 +10,8 @@ var concat = require('gulp-concat'),
     sass = require('gulp-ruby-sass'),
     util = require('gulp-util'),
     when = require('when'),
-    markdown = require('gulp-markdown')
+    markdown = require('gulp-markdown'),
+    pug = require('gulp-pug');
 
 /**** Compiler tasks ****/
 var compiler = {}
@@ -28,6 +29,18 @@ compiler.jade = function() {
   var deferred = when.defer()
   gulp.src('./jade/[!_]*.jade')
     .pipe(jade())
+    .pipe(gulp.dest('./out'))
+    .pipe(livereload())
+    .on('end', deferred.resolve)
+  return deferred.promise
+}
+
+// Compile Pug -> HTML
+compiler.pug = function() {
+  console.log("Compiling Pug -> HTML...")
+  var deferred = when.defer()
+  gulp.src('./pug/[!_]*.pug')
+    .pipe(pug())
     .pipe(gulp.dest('./out'))
     .pipe(livereload())
     .on('end', deferred.resolve)
@@ -95,7 +108,8 @@ compiler.md = function(){
 compiler.all = function(done){
   when.all([
     compiler.md(),
-    compiler.jade(),
+    //compiler.jade(),
+    compiler.pug(),
     compiler.scss(),
     compiler.js(),
     compiler.images(),
@@ -134,6 +148,7 @@ var watch = function() {
 // Build gulp tasks
 gulp.task('clean', compiler.clean)
 gulp.task('jade', compiler.jade)
+gulp.task('pug', compiler.pug)
 gulp.task('scss', compiler.scss)
 gulp.task('js', compiler.js)
 gulp.task('img', compiler.img)
