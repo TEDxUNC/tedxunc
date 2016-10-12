@@ -1,22 +1,8 @@
-div
-  h1 Header
-  ul
-    li List Item 1
-    li List Item 2
-    li List Item 3
-  p.
-    aaaaI'm a barbie girl in a barbie world
-    Because this Jade element was "p." with 
-    a period, it treats this all as text and 
-    not new HTML elements
-    
-- var x = 5;
-div
-  ul
-    - for (var i=1; i<=x; i++) {
-      li= i + ". this was made in a for loop"
-    - }
-
-div
-  p.
-    my name is squidward
+doctype html
+html(lang="en")
+  head
+    title=pageTitle
+    script(src="js/main.js" type='text/javascript')
+  body
+    -var arr = range(0, 3)
+      p=arr[1]
