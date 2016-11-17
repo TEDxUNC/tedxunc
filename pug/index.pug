@@ -1,8 +1,25 @@
 doctype html
-html(lang="en")
+html
   head
-    title=pageTitle
-    script(src="js/main.js" type='text/javascript')
-  body
-    -var arr = range(0, 3)
-      p=arr[1]
+    title=TEDxUNC
+
+    // meta
+    meta(property='og:title', content='TEDxUNC Spring 2017')
+    meta(property='og:url', content='https://tedxunc.com')
+    meta(property='og:site_name', content='TEDxUNC 2017')
+
+    include ./shared/_meta.pug
+    link(rel='shortcut icon', type='image/ico', href='/img/Profile.png')
+    link(rel='stylesheet', href='css/index.css')
+    script(type='text/javascript', src='js/main.js')
+    script $(window).load(init);
+
+  body.tedxunc-body
+
+    include ./homepage/_home.pug
+    include ./homepage/_roots.pug
+    include ./homepage/_boroughs.pug
+    include ./homepage/_society.pug
+    include ./homepage/_humanity.pug
+    //include ./homepage/_info.pug
+     

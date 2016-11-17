@@ -136,7 +136,8 @@ var watch = function() {
     }).resume()
   }).listen(port)
 
-  gulp.watch('./jade/**/*', ['jade'])
+  //gulp.watch('./jade/**/*', ['jade'])
+  gulp.watch('./pug/**/*', ['pug'])
   gulp.watch('./scss/**/*', ['scss'])
   gulp.watch('./js/**/*', ['js'])
   gulp.watch('./img/**/*', ['images'])
