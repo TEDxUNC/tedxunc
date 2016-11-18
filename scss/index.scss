@@ -1,1 +1,85 @@
+@import 'fonts';
 @import 'bootstrap/bootstrap';
+
+body{
+  background-image: url("../../img/wireframe.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+}
+h1{
+  font-size: 800% !important;
+  color: red;
+}
+h2{
+  font-size: 350% !important;
+  color: white;
+}
+p{
+  font-family: Arial, Helvetica, sans-serif;
+}
+#boroughs{
+  margin-top: 100px;
+}
+#home{
+  margin-top: 100px;
+  font-family: 'sophia';
+}
+#roots, #boroughs, #society, #humanity{
+  margin-top: 300px;
+  font-family: 'sophia';
+  h2{
+    font-size: 800% !important;
+    color: black;
+  }
+}
+#boroughs, #humanity{
+  h2, p{
+    color: white !important;
+  }
+}
+#society{
+  margin-top: 450px !important;
+}
+.navbar{
+  margin-top: 45px;
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  li{
+    color: white;
+    margin-left: 200px;
+  }
+}
+/*#navbar {
+  overflow: hidden;
+  background-color: transparent;
+  z-index: 100;
+  background-color: $gray;
+  &.relative{
+    bottom: 0px;
+    position: absolute;
+  }
+  &.sticky{
+    margin-top: 0px;
+    position: fixed;
+    top: 0px;
+    background-color: $gray;
+    width: 100%;
+  }
+  .navi li:first-of-type {
+    padding-left: 0px;
+  }
+}
+
+.navi {
+  list-style-type: none;
+  padding-left: 0px;
+  li {
+    font-size: 22px;
+    float: left;
+    display: block;
+  }
+  a {
+  }
+}*/
