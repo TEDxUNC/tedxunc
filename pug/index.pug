@@ -3,16 +3,15 @@ html
   head
     title=TEDxUNC
 
-    // meta
     meta(property='og:title', content='TEDxUNC Spring 2017')
     meta(property='og:url', content='https://tedxunc.com')
     meta(property='og:site_name', content='TEDxUNC 2017')
 
     include ./shared/_meta.pug
-    link(rel='shortcut icon', type='image/ico', href='/img/Profile.png')
+    link(rel='shortcut icon', type='image/ico', href='../img/logo.png')
     link(rel='stylesheet', href='css/index.css')
-    script(type='text/javascript', src='js/main.js')
-    script $(window).load(init);
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js")
+    //script $(window).load(init);
 
   body.tedxunc-body
 
@@ -23,3 +22,8 @@ html
     include ./homepage/_society.pug
     include ./homepage/_humanity.pug
      
+    script(src="../node_modules/scrollmagic/scrollmagic/minified/ScrollMagic.min.js")
+    script(src="../node_modules/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js")
+    script(src='../node_modules/scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js')
+    script(src='js/main.js')
+    script(src='js/_parallax.js')

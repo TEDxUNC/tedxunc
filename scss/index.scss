@@ -1,11 +1,19 @@
 @import 'fonts';
 @import 'bootstrap/bootstrap';
 
+.logo{
+  width: 150px;
+}
 body{
-  background-image: url("../../img/wireframe.png");
+  background: url("../../img/wireframe.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  padding-top: 50px;
 }
 h1{
   font-size: 800% !important;
@@ -41,45 +49,3 @@ p{
 #society{
   margin-top: 450px !important;
 }
-.navbar{
-  margin-top: 45px;
-  background-color: transparent;
-  border: none;
-  width: 100%;
-  li{
-    color: white;
-    margin-left: 200px;
-  }
-}
-/*#navbar {
-  overflow: hidden;
-  background-color: transparent;
-  z-index: 100;
-  background-color: $gray;
-  &.relative{
-    bottom: 0px;
-    position: absolute;
-  }
-  &.sticky{
-    margin-top: 0px;
-    position: fixed;
-    top: 0px;
-    background-color: $gray;
-    width: 100%;
-  }
-  .navi li:first-of-type {
-    padding-left: 0px;
-  }
-}
-
-.navi {
-  list-style-type: none;
-  padding-left: 0px;
-  li {
-    font-size: 22px;
-    float: left;
-    display: block;
-  }
-  a {
-  }
-}*/
