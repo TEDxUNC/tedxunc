@@ -1,1 +1,1 @@
-var controller=new ScrollMagic.Controller,scene=new ScrollMagic.Scene({duration:400,offset:50}).setPin("#roots").addTo(controller);
+var controller=new ScrollMagic.Controller,scene=new ScrollMagic.Scene({duration:400,offset:400}).setPin("#roots").addTo(controller);
