@@ -108,7 +108,6 @@ compiler.md = function(){
 compiler.all = function(done){
   when.all([
     compiler.md(),
-    //compiler.jade(),
     compiler.pug(),
     compiler.scss(),
     compiler.js(),
