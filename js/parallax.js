@@ -23,13 +23,12 @@
 //         .addTo(controller);
 // }
 
-
 var controller = new ScrollMagic.Controller();
 // define movement of panels
 var wipeAnimation = new TimelineMax()
     .fromTo("#roots", 1, {x: "-100%"}, {x: "0%", ease: Linear.easeNone})  // in from left
     .fromTo("#boroughs",    1, {x:  "100%"}, {x: "0%", ease: Linear.easeNone})  // in from right
-    .fromTo("#society", 1, {y: "-200%"}, {y: "0%", ease: Linear.easeNone}) // in from top
+    .fromTo("#society", 1, {y: "-100%"}, {y: "0%", ease: Linear.easeNone}) // in from top
     .fromTo("#humanity", 1, {y: "100%"}, {y: "0%", ease: Linear.easeNone}); // in from bottom
     // create scene to pin and link animation
 new ScrollMagic.Scene({

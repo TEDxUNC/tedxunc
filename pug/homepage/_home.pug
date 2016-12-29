@@ -1,7 +1,13 @@
-#home
+#home.anchor
     .container
         .row
-            .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1.content
+            .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1.col-sm-12.content
+                video(playsinline autoplay="autoplay" muted loop id="backgroundVideo")
+                    source(src='../img/background.webm' type="video/webm")
+                    source(src='../img/background.mp4' type="video/mp4")
+                // super hack to autoplay on chrome
+                script document.getElementById('backgroundVideo').addEventListener('canplay', function() { this.play(); } );
+                img(alt='TEDxUNC', src='../img/logo.png').logo
                 h2.text-center.
                     invites you to the 2016 conference:
                 h1.text-center.

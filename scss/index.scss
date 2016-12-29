@@ -2,7 +2,9 @@
 @import 'bootstrap/bootstrap';
 
 .logo{
-  width: 150px;
+  width: 30%;
+  margin: auto;
+  display: block;
 }
 // body{
 //   background: url("../../img/wireframe.png");
@@ -64,13 +66,11 @@ h1{
   font-size: 800% !important;
   color: red;
 }
-#home{
-  margin-top: 100px;
-  font-family: 'sophia';
-  h2{
-    color: black;
-  }
+
+#home h2{
+  color: rgb(255, 100, 0);
 }
+
 .anchor{
   height: 100%;
   width: 100%;
@@ -78,13 +78,18 @@ h1{
   font-family: 'sophia';
   h2{
     font-size: 800% !important;
-
   }
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+  display: flex;
+  align-items: center;
 }
 
 h2, p{
   color: white;
+  font-size: 20px;
 }
+
 #roots{
   background-color: #111;
 }
@@ -99,4 +104,30 @@ h2, p{
 
 #humanity{
   background-color: #777;
+}
+
+video#backgroundVideo{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  //background: url(polina.jpg) no-repeat;
+  background-size: cover; 
+}
+
+@media screen and (max-device-width: 800px) {
+    html {
+         background: url(logo.png) #000 no-repeat center center fixed;
+    }
+    #backgroundVideo {
+        display: none;
+    }
 }
