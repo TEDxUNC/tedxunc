@@ -2,14 +2,10 @@
   .container
     .row
       nav.navbar.navbar-default.navbar-fixed-top
-        ul.nav.nav-justified
-          li.active: a(href='') About
-          li: a(href='') Speakers
-          //li: a(href=''): img(alt='hi', class='logo', src='../img/logo.png')
-          li: a(href='') FAQ
-          li: a(href='') Contact
-        //- ul.navi.relative
-        //-   li: a.subtle-link(class="extra" href='/#about') About
-        //-   li: a.subtle-link(href='') Speakers
-        //-   li: a.subtle-link(href='') FAQ
-        //-   li: a.subtle-link(href='') Contact
+        .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1.col-sm-12.content    
+          ul.nav.nav-justified
+            li.active: a(href=''): strong about
+            li: a(href=''): strong speakers
+            //li: a(href=''): img(alt='hi', class='logo', src='../img/logo.png')
+            li: a(href=''): strong faq
+            li: a(href=''): strong contact
