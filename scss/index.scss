@@ -4,67 +4,70 @@
 html {
   height: 100%
 }
+
 body.tedxunc-body{
   width: 100%;
   height: 100%;
-  //overflow: hidden;
   margin: 0;
   padding: 0;
 }
+
 h1{
   font-size: 800% !important;
   color: red;
-}
-
-#home{
-  h2{
-    color: rgb(255, 100, 0);
-  }
 }
 
 .anchor{
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  overflow: hidden;
 }
 
 .anchor .container{
   height: 100%;
   width: 100%;
-  position: absolute;
   position: relative;
-  font-family: 'sophia';
+  font-family: 'Montserrat', sans-serif;
   h2{
-    font-size: 800% !important;
+    font-size: 800%;
   }
   min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
   min-height: 100vh; /* These two lines are counted as one :-)       */
-  display: flex;
+ // display: flex;
   align-items: center;
-}
-
-h2, p{
-  color: white;
   font-size: 20px;
 }
 
-#roots{
-  background-image: url('../img/Backgrounds-01.png');
+.black-slide{
+  color: white;
 }
 
-#boroughs{
-  background-image: url('../img/Backgrounds-02.png');
+.white-slide{
+  color: black;
 }
 
-#society{
-  background-image: url('../img/Backgrounds-03.png');
-}
-
-#humanity{
-  background-image: url('../img/Backgrounds-04.png');
+.white{
+  background-color: white;
 }
 
 #speakers{
+  background-image: url('../img/Backgrounds-01.png');
+}
+
+#roots{
+  background-image: url('../img/Backgrounds-02.png');
+}
+
+#boroughs{
+  background-image: url('../img/Backgrounds-03.png');
+}
+
+#society{
+  background-image: url('../img/Backgrounds-04.png');
+}
+
+#humanity{
   background-image: url('../img/Backgrounds-05.png');
 }
 
@@ -77,7 +80,7 @@ h2, p{
 }
 
 #contact{
-  background-image: url('../img/Backgrounds-14.png');
+  background-image: url('../img/Backgrounds-08.png');
 }
 
 video#backgroundVideo, .overlay{
@@ -104,25 +107,15 @@ video#backgroundVideo{
   transform: translateX(-50%) translateY(-75%);
 }
 
-.arrow{
-  position: fixed;
-  top: 80%;
-  left: 50%;
-  width: auto;
-  height: auto;
-  z-index: -100;
-  -ms-transform: translateX(-50%) translateY(-100%);
-  -moz-transform: translateX(-50%) translateY(-100%);
-  -webkit-transform: translateX(-50%) translateY(-100%);
-  transform: translateX(-50%) translateY(-100%);
-}
-
 @media screen and (max-device-width: 800px) {
-    html {
-         background: url(logo.png) #000 no-repeat center center fixed;
-    }
+    // #home {
+    //      background: url(overlay.png) no-repeat center center fixed; 
+    // }
     #backgroundVideo {
         display: none;
+    }
+    h1, h2{
+      font-size: 300% !important;
     }
 }
 
@@ -147,4 +140,41 @@ video#backgroundVideo{
     color: rgb(229, 46, 38);
     border-bottom: 4px rgb(229, 46, 38) solid !important;
   }
+}
+
+button.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+button.accordion.active, button.accordion:hover {
+    background-color: #ddd;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+div.panel {
+    padding: 0 18px;
+    background-color: white;
+    color: black;
+    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    margin-bottom: 10px;
+}
+
+#map{
+  width: 97%;
+  margin: auto;
+  height: 40vh;
+  background-color: #555;
+  margin-bottom: 10px;
 }

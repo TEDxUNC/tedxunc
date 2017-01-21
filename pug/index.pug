@@ -22,6 +22,7 @@ html
 
     script(src='js/main.js' defer)
     script(src='js/parallax.js' defer)
+    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-4_BJmPIhvSoehQvaMgFQHitfce6I_60&callback=initMap" defer)
 
     //script(src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js" defer)
     //script $(window).load(init);
@@ -30,11 +31,14 @@ html
 
     include ./shared/_navbar.pug
     include ./homepage/_home.pug
-    include ./homepage/_roots.pug
-    include ./homepage/_boroughs.pug
-    include ./homepage/_society.pug
-    include ./homepage/_humanity.pug
-    include ./homepage/_speakers.pug
-    include ./homepage/_faq.pug
-    include ./homepage/_sponsors.pug
-    include ./homepage/_contact.pug
+
+    .white
+
+      include ./homepage/_speakers.pug
+      include ./homepage/_roots.pug
+      include ./homepage/_boroughs.pug
+      include ./homepage/_society.pug
+      include ./homepage/_humanity.pug
+      include ./homepage/_faq.pug
+      include ./homepage/_sponsors.pug
+      include ./homepage/_contact.pug
