@@ -10,6 +10,7 @@ body.tedxunc-body{
   height: 100%;
   margin: 0;
   padding: 0;
+  background-color: black;
 }
 
 h1{
@@ -18,10 +19,11 @@ h1{
 }
 
 .anchor{
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
   overflow: hidden;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .anchor .container{
@@ -47,40 +49,36 @@ h1{
   color: black;
 }
 
-.white{
-  background-color: white;
-}
-
 #speakers{
-  background-image: url('../img/Backgrounds-01.png');
+  background: url('../img/Backgrounds-01.png') no-repeat center center fixed; 
 }
 
 #roots{
-  background-image: url('../img/Backgrounds-02.png');
+  background: url('../img/Backgrounds-02.png') no-repeat center center fixed;
 }
 
 #boroughs{
-  background-image: url('../img/Backgrounds-03.png');
+  background: url('../img/Backgrounds-03.png') no-repeat center center fixed;
 }
 
 #society{
-  background-image: url('../img/Backgrounds-04.png');
+  background: url('../img/Backgrounds-04.png') no-repeat center center fixed;
 }
 
 #humanity{
-  background-image: url('../img/Backgrounds-05.png');
+  background: url('../img/Backgrounds-05.png') no-repeat center center fixed;
 }
 
 #faq{
-  background-image: url('../img/Backgrounds-06.png');
+  background: url('../img/Backgrounds-06.png') no-repeat center center fixed;
 }
 
 #sponsors{
-  background-image: url('../img/Backgrounds-07.png');
+  background: url('../img/Backgrounds-07.png') no-repeat center center fixed;
 }
 
 #contact{
-  background-image: url('../img/Backgrounds-08.png');
+  background: url('../img/Backgrounds-08.png') no-repeat center center fixed;
 }
 
 video#backgroundVideo, .overlay{
@@ -108,11 +106,19 @@ video#backgroundVideo{
 }
 
 @media screen and (max-device-width: 800px) {
-    // #home {
-    //      background: url(overlay.png) no-repeat center center fixed; 
-    // }
+    #home {
+      //background-image: url(overlay.png) no-repeat center center fixed; 
+      //background-color: #888;
+    }
+    .overlay{
+      width: 200%;
+      height: 100%;
+    }
     #backgroundVideo {
-        display: none;
+      display: none;
+    }
+    #faq{
+      border-bottom: 10px solid #222;
     }
     h1, h2{
       font-size: 300% !important;
@@ -154,12 +160,10 @@ button.accordion {
     transition: 0.4s;
 }
 
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 button.accordion.active, button.accordion:hover {
     background-color: #ddd;
 }
 
-/* Style the accordion panel. Note: hidden by default */
 div.panel {
     padding: 0 18px;
     background-color: white;
