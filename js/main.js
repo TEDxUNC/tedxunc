@@ -13,6 +13,8 @@ var initMap = function(){
 
 $(document).ready(function(){
     //initMap();
+    console.log($(".nav").height());
+    $("video#backgroundVideo, .overlay").css("margin-top", $(".nav").height());
 
     var top1 = $('#home').offset().top;
     var top2 = $('#speakers').offset().top;

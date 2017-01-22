@@ -14,8 +14,9 @@ body.tedxunc-body{
 }
 
 h1{
-  font-size: 800% !important;
-  color: red;
+  font-size: 12vw !important;
+  font-size: 800%;
+  color: rgb(229, 46, 38);;
 }
 
 .anchor{
@@ -36,7 +37,6 @@ h1{
   }
   min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
   min-height: 100vh; /* These two lines are counted as one :-)       */
- // display: flex;
   align-items: center;
   font-size: 20px;
 }
@@ -50,35 +50,35 @@ h1{
 }
 
 #speakers{
-  background: url('../img/Backgrounds-01.png') no-repeat center center fixed; 
+  background: url('../img/Backgrounds-01.png') no-repeat center center;
 }
 
 #roots{
-  background: url('../img/Backgrounds-02.png') no-repeat center center fixed;
+  background: url('../img/Backgrounds-02.png') no-repeat center center;
 }
 
 #boroughs{
-  background: url('../img/Backgrounds-03.png') no-repeat center center fixed;
+  background: url('../img/Backgrounds-03.png') no-repeat center center;
 }
 
 #society{
-  background: url('../img/Backgrounds-04.png') no-repeat center center fixed;
+  background: url('../img/Backgrounds-04.png') no-repeat center center;
 }
 
 #humanity{
-  background: url('../img/Backgrounds-05.png') no-repeat center center fixed;
+  background: url('../img/Backgrounds-05.png') no-repeat center center;
 }
 
 #faq{
-  background: url('../img/Backgrounds-06.png') no-repeat center center fixed;
+  background: url('../img/Backgrounds-06.png') no-repeat center center;
 }
 
 #sponsors{
-  background: url('../img/Backgrounds-07.png') no-repeat center center fixed;
+  background: url('../img/Backgrounds-07.png') no-repeat center center;
 }
 
 #contact{
-  background: url('../img/Backgrounds-08.png') no-repeat center center fixed;
+  background: url('../img/Backgrounds-08.png') no-repeat center center;
 }
 
 video#backgroundVideo, .overlay{
@@ -95,7 +95,7 @@ video#backgroundVideo, .overlay{
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
   //background: url(polina.jpg) no-repeat;
-  background-size: cover; 
+  background-size: cover;
 }
 
 video#backgroundVideo{
@@ -106,10 +106,6 @@ video#backgroundVideo{
 }
 
 @media screen and (max-device-width: 800px) {
-    #home {
-      //background-image: url(overlay.png) no-repeat center center fixed; 
-      //background-color: #888;
-    }
     .overlay{
       width: 200%;
       height: 100%;
@@ -120,7 +116,7 @@ video#backgroundVideo{
     #faq{
       border-bottom: 10px solid #222;
     }
-    h1, h2{
+    h2{
       font-size: 300% !important;
     }
 }
