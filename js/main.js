@@ -12,15 +12,16 @@ var initMap = function(){
 }
 
 $(document).ready(function(){
-    //initMap();
-    console.log($(".nav").height());
-    $("video#backgroundVideo, .overlay").css("margin-top", $(".nav").height());
+
+    var navHeight = $(".nav").height();
+
+    $("video#backgroundVideo, .overlay").css("margin-top", navHeight);
 
     var top1 = $('#home').offset().top;
-    var top2 = $('#speakers').offset().top;
-    var top3 = $('#faq').offset().top;
-    var top4 = $('#sponsors').offset().top;
-    var top5 = $('#contact').offset().top;
+    var top2 = $('#speakers').offset().top - navHeight;
+    var top3 = $('#faq').offset().top - navHeight;
+    var top4 = $('#sponsors').offset().top - navHeight;
+    var top5 = $('#contact').offset().top - navHeight;
 
     $(document).scroll(function() {
         if ($(document).scrollTop() >= top1 && $(document).scrollTop() < top2) {

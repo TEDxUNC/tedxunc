@@ -1,26 +1,30 @@
-var parallax = function(){
 
-    var controller = new ScrollMagic.Controller();
+$(document).ready(function(){
+    
+    var parallax = function(){
+        var controller = new ScrollMagic.Controller();
+        var navHeight = $(".nav").height();
 
-    // change behaviour of controller to animate scroll instead of jump
-	controller.scrollTo(function (newpos) {
-		TweenMax.to(window, 0.5, {scrollTo: {y: newpos}});
-	});
+        // change behaviour of controller to animate scroll instead of jump
+        controller.scrollTo(function (newpos) {
+            TweenMax.to(window, 0.5, {scrollTo: {y: newpos - navHeight}});
+        });
 
-	//  bind scroll to anchor links
-	$(document).on("click", "a[href^='#']", function (e) {
-		var id = $(this).attr("href");
-		if ($(id).length > 0) {
-			e.preventDefault();
+        //  bind scroll to anchor links
+        $(document).on("click", "a[href^='#']", function (e) {
+            var id = $(this).attr("href");
+            if ($(id).length > 0) {
+                e.preventDefault();
 
-			// trigger scroll
-			controller.scrollTo(id);
+                // trigger scroll
+                controller.scrollTo(id);
 
-				// if supported by the browser we can even update the URL.
-			if (window.history && window.history.pushState) {
-				history.pushState("", document.title, id);
-			}
-		}
-	});
-}
-parallax();
+                    // if supported by the browser we can even update the URL.
+                if (window.history && window.history.pushState) {
+                    history.pushState("", document.title, id);
+                }
+            }
+        });
+    }
+    parallax();
+});

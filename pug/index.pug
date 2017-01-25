@@ -6,11 +6,14 @@ html
     meta(property='og:title', content='TEDxUNC Spring 2017')
     meta(property='og:url', content='https://tedxunc.com')
     meta(property='og:site_name', content='TEDxUNC 2017')
+    meta(name="description" content="TEDxUNC is an independently organized TED event that is held annually at UNC-Chapel Hill.  This year’s theme, \"Home\" will explore what home means to us at a personal, communal, societal, and global level.")
 
     include ./shared/_meta.pug
-    link(rel='shortcut icon', type='image/ico', href='../img/logo.png')
+    link(rel='shortcut icon', type='image/ico', href='../img/favicon.png')
+    link(rel="image_src" href="../img/meta_overlay.png")
     link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Montserrat')
     link(rel='stylesheet', href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css")
+    link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
     link(rel='stylesheet', href='css/index.css')
 
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" defer)
@@ -23,9 +26,6 @@ html
     script(src='js/main.js' defer)
     script(src='js/parallax.js' defer)
     script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-4_BJmPIhvSoehQvaMgFQHitfce6I_60&callback=initMap" defer)
-
-    //script(src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js" defer)
-    //script $(window).load(init);
 
   body.tedxunc-body
 

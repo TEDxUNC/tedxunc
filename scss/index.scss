@@ -14,8 +14,7 @@ body.tedxunc-body{
 }
 
 h1{
-  font-size: 12vw !important;
-  font-size: 800%;
+  font-size: 10vw !important;
   color: rgb(229, 46, 38);;
 }
 
@@ -96,6 +95,7 @@ video#backgroundVideo, .overlay{
   transform: translateX(-50%) translateY(-50%);
   //background: url(polina.jpg) no-repeat;
   background-size: cover;
+  margin-top: 54.5px;
 }
 
 video#backgroundVideo{
@@ -106,19 +106,22 @@ video#backgroundVideo{
 }
 
 @media screen and (max-device-width: 800px) {
-    .overlay{
-      width: 200%;
-      height: 100%;
-    }
-    #backgroundVideo {
-      display: none;
-    }
-    #faq{
-      border-bottom: 10px solid #222;
-    }
-    h2{
-      font-size: 300% !important;
-    }
+  #home{
+    background: url('../img/mobile_overlay.png') no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  #backgroundVideo, .overlay {
+    display: none;
+  }
+  #faq{
+    border-bottom: 10px solid #222;
+  }
+  h2{
+    font-size: 300% !important;
+  }
 }
 
 .nav, .navbar{
@@ -145,30 +148,34 @@ video#backgroundVideo{
 }
 
 button.accordion {
-    background-color: #eee;
-    color: #444;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    text-align: left;
-    border: none;
-    outline: none;
-    transition: 0.4s;
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
 }
 
 button.accordion.active, button.accordion:hover {
-    background-color: #ddd;
+  background-color: #ddd;
 }
 
 div.panel {
-    padding: 0 18px;
-    background-color: white;
-    color: black;
-    display: none;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
-    margin-bottom: 10px;
+  padding: 0 18px;
+  background-color: white;
+  color: black;
+  display: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  //margin-bottom: 10px;
+}
+
+.questions{
+  margin-bottom: 10px;
 }
 
 #map{
@@ -177,4 +184,21 @@ div.panel {
   height: 40vh;
   background-color: #555;
   margin-bottom: 10px;
+}
+
+.platinum{
+  width: 100%;
+}
+
+.gold{
+  width: 60%;
+}
+
+.platinum, .gold{
+  margin: auto;
+  display: block;
+}
+
+.social-media{
+  margin-top: 100px;
 }
