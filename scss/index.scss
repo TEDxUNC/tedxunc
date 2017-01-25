@@ -2,7 +2,8 @@
 @import 'bootstrap/bootstrap';
 
 html {
-  height: 100%
+  height: 100%;
+  // overflow: hidden;
 }
 
 body.tedxunc-body{
@@ -11,6 +12,8 @@ body.tedxunc-body{
   margin: 0;
   padding: 0;
   background-color: black;
+  // overflow-y: scroll;
+  // -webkit-overflow-scrolling: touch;
 }
 
 h1{
@@ -93,21 +96,20 @@ video#backgroundVideo, .overlay{
   -moz-transform: translateX(-50%) translateY(-50%);
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-  //background: url(polina.jpg) no-repeat;
+  //background: url('../img/background_still.png') no-repeat;
   background-size: cover;
-  margin-top: 54.5px;
-}
-
-video#backgroundVideo{
-  -ms-transform: translateX(-50%) translateY(-75%);
-  -moz-transform: translateX(-50%) translateY(-75%);
-  -webkit-transform: translateX(-50%) translateY(-75%);
-  transform: translateX(-50%) translateY(-75%);
 }
 
 @media screen and (max-device-width: 800px) {
+  html{
+    overflow: hidden !important;
+  }
+  body.tedxunc-body{
+    overflow-y: scroll !important;
+    -webkit-overflow-scrolling:touch !important;
+  }
   #home{
-    background: url('../img/mobile_overlay.png') no-repeat center center;
+    background: url('../img/mobile_overlay2.png') no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -171,7 +173,6 @@ div.panel {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
-  //margin-bottom: 10px;
 }
 
 .questions{
@@ -201,4 +202,8 @@ div.panel {
 
 .social-media{
   margin-top: 100px;
+}
+
+video{ 
+  background: transparent url('../img/background_still.png') 50% 50% / fill no-repeat ;
 }

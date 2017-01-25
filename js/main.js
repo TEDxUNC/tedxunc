@@ -15,7 +15,7 @@ $(document).ready(function(){
 
     var navHeight = $(".nav").height();
 
-    $("video#backgroundVideo, .overlay").css("margin-top", navHeight);
+    //$("video#backgroundVideo, .overlay").css("margin-top", navHeight);
 
     var top1 = $('#home').offset().top;
     var top2 = $('#speakers').offset().top - navHeight;
