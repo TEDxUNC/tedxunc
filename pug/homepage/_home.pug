@@ -2,9 +2,12 @@
     .container
         .row
             .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1.col-sm-12.col-xs-12.content
+                .warning
+                    h1.text-center.
+                        ALERT: TEDxUNC is postponed due to the water shortage.
                 video(playsinline autoplay="autoplay" muted loop id="backgroundVideo")
                     source(src='../img/background3.webm' type="video/webm")
                     source(src='../img/background3.mp4' type="video/mp4")
                 // super hacky fix to autoplay on chrome
                 script document.getElementById('backgroundVideo').addEventListener('canplay', function() { this.play(); } );
-                img(alt='overlay', src='../img/overlay.png').overlay
+                img(alt='overlay', src='../img/overlay2.png').overlay

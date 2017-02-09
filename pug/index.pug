@@ -6,12 +6,12 @@ html
     meta(property='og:title', content='TEDxUNC Spring 2017')
     meta(property='og:url', content='https://tedxunc.com')
     meta(property='og:site_name', content='TEDxUNC 2017')
-    meta(property='og:image', content='http://i.imgur.com/VyDp0th.jpg')
+    meta(property='og:image', content='http://i.imgur.com/tHvpzSA.png')
     meta(property="og:description" content="TEDxUNC is an independently organized TED event that is held annually at UNC-Chapel Hill.  This year’s theme, \"Home\" will explore what home means to us at a personal, communal, societal, and global level.")
 
     include ./shared/_meta.pug
     link(rel='shortcut icon', type='image/ico', href='../img/favicon.png')
-    link(rel="image_src" href="../img/meta_overlay.png")
+    link(rel="image_src" href="../img/meta_overlay2.png")
     link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Montserrat')
     link(rel='stylesheet', href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css")
     link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
@@ -32,11 +32,14 @@ html
 
     include ./shared/_navbar.pug
     include ./homepage/_home.pug
-    include ./homepage/_speakers.pug
-    include ./homepage/_roots.pug
-    include ./homepage/_boroughs.pug
-    include ./homepage/_society.pug
-    include ./homepage/_humanity.pug
-    include ./homepage/_faq.pug
-    include ./homepage/_sponsors.pug
-    include ./homepage/_contact.pug
+
+    .black-page
+
+      include ./homepage/_speakers.pug
+      include ./homepage/_roots.pug
+      include ./homepage/_boroughs.pug
+      include ./homepage/_society.pug
+      include ./homepage/_humanity.pug
+      include ./homepage/_faq.pug
+      include ./homepage/_sponsors.pug
+      include ./homepage/_contact.pug

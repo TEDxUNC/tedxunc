@@ -74,4 +74,26 @@ $(document).ready(function(){
             } 
         }
     }
+
+    var modals = $('.modal');
+    var headshots = $('.headshot');
+    var closes = $('.close');
+    headshots.toArray().map(function(headshot, index){
+        headshot.onclick = function(){
+            modals[index].style.display = "block";
+        }
+    })
+
+    closes.toArray().map(function(close, index){
+        close.onclick = function(){
+            modals[index].style.display = "none";
+        }
+    })
+    window.onclick = function(event) {
+        for (var i=0; i<modals.length; i++){
+            if (event.target == modals[i]) {
+                modals[i].style.display = "none";
+            }
+        }
+    }
 });

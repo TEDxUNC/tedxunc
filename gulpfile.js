@@ -11,7 +11,8 @@ var concat = require('gulp-concat'),
     util = require('gulp-util'),
     when = require('when'),
     markdown = require('gulp-markdown'),
-    pug = require('gulp-pug');
+    pug = require('gulp-pug'),
+    cachebust = require('gulp-cache-bust');
 
 /**** Compiler tasks ****/
 var compiler = {}
@@ -41,6 +42,9 @@ compiler.pug = function() {
   var deferred = when.defer()
   gulp.src('./pug/[!_]*.pug')
     .pipe(pug())
+    .pipe(cachebust({
+        type: 'timestamp'
+    }))
     .pipe(gulp.dest('./out'))
     .pipe(livereload())
     .on('end', deferred.resolve)

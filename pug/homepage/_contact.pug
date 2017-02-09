@@ -15,3 +15,8 @@
                         span.fa.fa-5x.fa-twitter
                     a.btn.btn-social-icon.btn-instagram(href='https://www.instagram.com/tedxunc' target='blank')
                         span.fa.fa-5x.fa-instagram
+                video(playsinline autoplay="autoplay" muted loop id="boomerangVideo")
+                    source(src='../img/boomerang.mp4' type="video/mp4")
+                    source(src='../img/boomerang.webm' type="video/webm")
+                // super hacky fix to autoplay on chrome
+                script document.getElementById('boomerangVideo').addEventListener('canplay', function() { this.play(); } );

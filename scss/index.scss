@@ -23,10 +23,10 @@ h1{
 
 .anchor{
   overflow: hidden;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important;
+  -o-background-size: cover !important;
+  background-size: cover !important;
 }
 
 .anchor .container{
@@ -43,12 +43,22 @@ h1{
   font-size: 20px;
 }
 
+.black-page{
+  background-color: black;
+}
+
 .black-slide{
   color: white;
+  .headshot{
+    border: 1px solid white;
+  }
 }
 
 .white-slide{
   color: black;
+  .headshot{
+    border: 1px solid black;
+  }
 }
 
 #speakers{
@@ -101,28 +111,40 @@ video#backgroundVideo, .overlay{
 }
 
 @media screen and (max-device-width: 800px) {
+  #boomerangVideo, #backgroundVideo, .overlay {
+    display: none;
+  }
   html{
     overflow: hidden !important;
   }
   body.tedxunc-body{
     overflow-y: scroll !important;
-    -webkit-overflow-scrolling:touch !important;
+    -webkit-overflow-scrolling: touch !important;
   }
   #home{
-    background: url('../img/mobile_overlay2.png') no-repeat center center;
+    background: url('../img/mobile_overlay3.png') no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-  }
-  #backgroundVideo, .overlay {
-    display: none;
   }
   #faq{
     border-bottom: 10px solid #222;
   }
   h2{
     font-size: 300% !important;
+  }
+  .modal-body p, div.panel p{
+    font-size: 3.5vw;
+  }
+  .headshot{
+    width: 98.5% !important;
+  }
+}
+
+@media screen and (min-width: 1900px) and (max-width: 1950px){
+  .headshot{
+    width: 98% !important;
   }
 }
 
@@ -141,7 +163,6 @@ video#backgroundVideo, .overlay{
   }
   a:hover{
     color: rgb(229, 46, 38);
-    // border-bottom: 4px rgb(229, 46, 38) solid !important;
   }
   a.selected{
     color: rgb(229, 46, 38);
@@ -206,4 +227,103 @@ div.panel {
 
 video{ 
   background: transparent url('../img/background_still.png') 50% 50% / fill no-repeat ;
+}
+
+.headshot{
+  width: 99.5%;
+  opacity: 1;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.headshot:hover{
+  opacity: 0.75;
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+    color: black;
+}
+
+.modal-content {
+    background-color: #fcfcfc;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.7s;
+    animation-name: animatetop;
+    animation-duration: 0.7s
+}
+
+.modal-header {
+    padding: 2px 16px 10px;
+    background-color: rgb(229,46, 38);
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    h3{
+      font-size: 5vw;
+    }
+}
+
+.modal-body {
+  padding: 20px 10px 10px 10px;
+  text-align: center;
+  background-color: #333;
+  color: white;
+}
+
+.west-modal h3{
+  font-size: 3.5vw !important;
+}
+
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@-webkit-keyframes animatetop {
+    from {top: -300px; opacity: 0} 
+    to {top: 0; opacity: 1}
+}
+
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+#boomerangVideo{
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.warning{
+  margin-top: 60px;
+  background-color: black;
+  h1{
+    font-size: 250% !important;
+  }
 }
